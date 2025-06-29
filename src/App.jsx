@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -138,6 +137,7 @@ const App = () => {
     alert('Спасибо за заказ! Мы свяжемся с вами в ближайшее время.');
     setCart([]);
     setOrderForm({ name: '', phone: '', address: '' });
+    setIsCartOpen(false);
   };
 
   const StarRating = ({ rating }) => {
